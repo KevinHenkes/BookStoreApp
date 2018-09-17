@@ -25,7 +25,7 @@ public class Book {
     static {
         books = new HashSet<>();
         books.add(new Book(1,"C++",20,"ABC"));
-        books.add(new Book(1,"Java",30,"XYZ"));
+        books.add(new Book(2,"Java",30,"XYZ"));
     }
 
     public static Set<Book> allBooks() {
