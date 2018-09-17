@@ -1,11 +1,7 @@
 @(bookForm : Form[Book])
 @import helper._
 
-<html>
-<head>
-    <title>Edit Book</title>
-</head>
-<body>
+@layout("Edit Book") {
     <h1>Edit Book</h1>
     @helper.form(action = helper.CSRF(routes.BooksController.update())) {
         @helper.inputText(bookForm("id"))
@@ -15,6 +11,4 @@
 
         <input type="submit" value="Edit Book">
     }
-
-</body>
-</html>
+}
