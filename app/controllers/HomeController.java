@@ -2,7 +2,9 @@ package controllers;
 
 import play.mvc.*;
 
-import views.html.*;
+import views.html.index;
+
+import views.html.Home.*;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -18,6 +20,10 @@ public class HomeController extends Controller {
      */
     public Result index() {
         return ok(index.render("Hello play"));
+    }
+
+    public Result welcome(String name, String lastName) {
+        return ok(welcome.render(name, lastName));
     }
 
 }
